@@ -14,7 +14,7 @@ NTU Final Year Project (FYP): Facial Expression Transfer using StyleGAN
 - click 7.1.2
 - dnnlib-util 0.3.1
 
-- Visual Studio Code 2019 (for windows to compile C)
+- Visual Studio Code 2019 (for windows to compile C++)
 
 
 ### 2. Resources to be downloaded
