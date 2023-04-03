@@ -1,0 +1,61 @@
+Loading training set...
+
+Num images:  7
+Image shape: [3, 1024, 1024]
+Label shape: [0]
+
+Constructing networks...
+Resuming from "pretrained/stylegan2-ffhq-config-f.pkl"
+Setting up PyTorch plugin "bias_act_plugin"... Done.
+E:\NTU_FYP\stylegan2\torch_utils\ops\conv2d_gradfix.py:55: UserWarning: conv2d_gradfix not supported on PyTorch 1.12.0+cu116. Falling back to torch.nn.functional.conv2d().
+  warnings.warn(f'conv2d_gradfix not supported on PyTorch {torch.__version__}. Falling back to torch.nn.functional.conv2d().')
+Traceback (most recent call last):
+  File "train.py", line 538, in <module>
+    main() # pylint: disable=no-value-for-parameter
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\click\core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\click\core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\click\core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\click\core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\click\decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "train.py", line 531, in main
+    subprocess_fn(rank=0, args=args, temp_dir=temp_dir)
+  File "train.py", line 383, in subprocess_fn
+    training_loop.training_loop(rank=rank, **args)
+  File "E:\NTU_FYP\stylegan2\training\training_loop.py", line 166, in training_loop
+    img = misc.print_module_summary(G, [z, c])
+  File "E:\NTU_FYP\stylegan2\torch_utils\misc.py", line 212, in print_module_summary
+    outputs = module(*inputs)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\torch\nn\modules\module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "E:\NTU_FYP\stylegan2\training\networks.py", line 499, in forward
+    img = self.synthesis(ws, **synthesis_kwargs)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\torch\nn\modules\module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "E:\NTU_FYP\stylegan2\training\networks.py", line 471, in forward
+    x, img = block(x, img, cur_ws, **block_kwargs)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\torch\nn\modules\module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "E:\NTU_FYP\stylegan2\training\networks.py", line 398, in forward
+    x = self.conv1(x, next(w_iter), fused_modconv=fused_modconv, **layer_kwargs)
+  File "D:\downloads\anaconda\envs\pt\lib\site-packages\torch\nn\modules\module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "E:\NTU_FYP\stylegan2\training\networks.py", line 299, in forward
+    x = modulated_conv2d(x=x, weight=self.weight, styles=styles, noise=noise, up=self.up,
+  File "E:\NTU_FYP\stylegan2\torch_utils\misc.py", line 101, in decorator
+    return fn(*args, **kwargs)
+  File "E:\NTU_FYP\stylegan2\training\networks.py", line 65, in modulated_conv2d
+    x = conv2d_resample.conv2d_resample(x=x, w=weight.to(x.dtype), f=resample_filter, up=up, down=down, padding=padding, flip_weight=flip_weight)
+  File "E:\NTU_FYP\stylegan2\torch_utils\misc.py", line 101, in decorator
+    return fn(*args, **kwargs)
+  File "E:\NTU_FYP\stylegan2\torch_utils\ops\conv2d_resample.py", line 147, in conv2d_resample
+    return _conv2d_wrapper(x=x, w=w, padding=[py0,px0], groups=groups, flip_weight=flip_weight)
+  File "E:\NTU_FYP\stylegan2\torch_utils\ops\conv2d_resample.py", line 54, in _conv2d_wrapper
+    return op(x, w, stride=stride, padding=padding, groups=groups)
+  File "E:\NTU_FYP\stylegan2\torch_utils\ops\conv2d_gradfix.py", line 38, in conv2d
+    return torch.nn.functional.conv2d(input=input, weight=weight, bias=bias, stride=stride, padding=padding, dilation=dilation, groups=groups)
+RuntimeError: CUDA out of memory. Tried to allocate 1.07 GiB (GPU 0; 4.00 GiB total capacity; 373.40 MiB already allocated; 2.21 GiB free; 408.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
