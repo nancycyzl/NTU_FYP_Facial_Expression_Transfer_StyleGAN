@@ -1,0 +1,2 @@
+download file "shape_predictor_68_face_landmarks.dat"
+link: https://drive.google.com/file/d/1i33vr1M_VqIbD4_2CUQNff82t6GFI4zz/view?usp=share_link

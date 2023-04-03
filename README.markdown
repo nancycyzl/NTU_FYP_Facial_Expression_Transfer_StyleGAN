@@ -1,6 +1,34 @@
 NTU Final Year Project (FYP): Facial Expression Transfer using StyleGAN
 -----------------------------------------------------------------------
 
+## *Prerequisite*
+
+### 1. Environment
+
+- python 3.8.8
+- torch 1.9.0+cu111
+- torchvision 0.10.0+cu111
+- pillow 9.3.0
+- numpy 1.10.1
+- pathlib2 2.3.5
+- click 7.1.2
+- dnnlib-util 0.3.1
+
+- Visual Studio Code 2019 (for windows to compile C)
+
+
+### 2. Resources to be downloaded
+
+1. data_processing/resources: download "shape_predictor_68_face_landmarks.dat" from [here](https://drive.google.com/file/d/1i33vr1M_VqIbD4_2CUQNff82t6GFI4zz/view?usp=share_link)
+2. pSp/pretrained: download "CurricularFace_Backbone.pth" from [here](https://drive.google.com/file/d/10z6DrOecDlCngAPfbaCKD2XF1faHtiHN/view?usp=sharing)
+3. pSp/pretrained: download "psp_ffhq_encode.pt" from [here](https://drive.google.com/file/d/1kLvdEaiZBDOzKUTujutjZ209VopCZZp_/view?usp=sharing)
+4. styleGAN2/pretrained: download "metfaces.pkl" from [here](https://drive.google.com/file/d/1fV-mdaar4ETbXWPdxOqBHh4xML1ntyNH/view?usp=sharing)
+5. styleGAN2/pretrained: download "stylegan2-ffhq-config-f.pkl" from [here](https://drive.google.com/file/d/1eFmb7Czqp3Po1oMCA682MWGGXoaegOpW/view?usp=sharing)
+6. styleGAN2/resources: download "ffhq-dataset-v2.json" from [here](https://drive.google.com/file/d/1dVLoUL1xw7SX5q-tDjajaAZLanciA9RN/view?usp=sharing)
+
+
+## *Code usage*
+
 ### 1. Data Processing
 
 Change directory to "data_processing"
