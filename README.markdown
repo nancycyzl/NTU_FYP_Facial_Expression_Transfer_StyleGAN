@@ -8,13 +8,18 @@ NTU Final Year Project (FYP): Facial Expression Transfer using StyleGAN
 - python 3.8.8
 - torch 1.9.0+cu111
 - torchvision 0.10.0+cu111
+- cuda 11.7
 - pillow 9.3.0
 - numpy 1.10.1
+- ninja 1.10.2.3
+- requests 2.25.1
 - pathlib2 2.3.5
 - click 7.1.2
-- dnnlib-util 0.3.1
+- tqdm 4.35.0
 
-- Visual Studio Code 2019 (for windows to compile C++)
+
+
+- Visual Studio 2019 (for windows to compile models)
 
 
 ### 2. Resources to be downloaded
@@ -132,3 +137,9 @@ NOTE: go to models/stylegan2/model.py & comment out line 489-503<br>
 ```
 python driving_video_pSp_byFrames.py target driving_source source_neutral --seq_file --save_dir --alpha --save_transferred_code
 ```
+
+## *Acknowledgement*
+
+Some codes are adapted from the following repository: <br>
+https://github.com/NVlabs/stylegan2-ada-pytorch <br>
+https://github.com/eladrich/pixel2style2pixel <br>
