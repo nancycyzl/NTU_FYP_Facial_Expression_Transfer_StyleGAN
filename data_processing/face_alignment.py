@@ -6,6 +6,9 @@ Usage: python face_alignment.py input_path output_path --enable_smooth
 input_path: an image or a folder of images
 output_path: an image filename or a folder
 enable_smooth: only applicable for a folder of images, use coordinates of the first frame to process all frames
+
+Note: ideally the cropped region is slightly larger than the head region. There maybe errors if the face takes up too much space.
+A possible way is modify line 84: change 3 and 3.5 to smaller values.
 '''
 
 
@@ -78,7 +81,7 @@ def get_crop_rect(left_eye, right_eye, mouth):
     cx = center[0]
     cy = center[1]
 
-    side = max(np.hypot(*eye_to_eye)*3, np.hypot(*eye_to_mouth)*3.5)
+    side = max(np.hypot(*eye_to_eye)*2.5, np.hypot(*eye_to_mouth)*2.8)
 
     top_left = (cx-side/2, cy-side/2)
     bot_right = (cx+side/2, cy+side/2)

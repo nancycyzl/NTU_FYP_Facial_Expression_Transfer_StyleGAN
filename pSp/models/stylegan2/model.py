@@ -486,7 +486,7 @@ class Generator(nn.Module):
 
         # get the count number
 
-        w_plus_folder = '../data/alpha/imgs_results/w_plus'
+        w_plus_folder = '../data/Person2_frames_reconstructed/w_plus'
         # w_plus_folder = 'data/video/vid7_frames_aligned_reconstructed/w_plus'
         filenames = os.listdir(w_plus_folder)
         seq_count = []

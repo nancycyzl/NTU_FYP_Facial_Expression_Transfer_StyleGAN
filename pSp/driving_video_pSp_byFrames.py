@@ -12,7 +12,7 @@ source_neutral: a latent code (.npy) for the neutral expression from the driving
 --seq_file: the sequence file generated during inference, which is used for combining transferred frames in correct sequence
 --save_dir: result saving directory
 --alpha: a float value controlling transfer intensity
---save_transferred_code: true/false
+--save_transferred_code: if don't want save then don't include this argument
 '''
 
 from models.stylegan2.model import Generator

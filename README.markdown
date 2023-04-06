@@ -81,10 +81,10 @@ python generate.py --outdir=out --seeds=200-205 --network=pretrained/stylegan2-f
 #### b) Project an image to the latent space of StyleGAN2 (W space)
 
 Obtain the latent code of an arbitrary image (in w space) using optimization method (default 1000 steps).<br>
-Results include: 1) projeted image; 2) w latent code; 3) optimization progress video (set save-video to False to disable)
+Results include: 1) projected image; 2) w latent code; 3) optimization progress video (set save-video to False to disable)
 
 ```
-python projector.py --outdir=out --target=..data/frame18.jpg --network=pretrained/stylegan2-ffhq-config-f.pkl (--save-video False --num-steps 1000)
+python projector.py --outdir=out --target=../data/frame18.jpg --network=pretrained/stylegan2-ffhq-config-f.pkl (--save-video False --num-steps 1000)
 ```
 
 ### 3. Generate images using pSp

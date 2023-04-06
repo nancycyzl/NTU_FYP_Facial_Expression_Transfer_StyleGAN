@@ -54,11 +54,11 @@ def main(args):
     # method 2: layer 3 and 5
     # this only copy the reference, so the change in code_new will also change code_base
 
-    base_layer3 = code_base[0][2] + args.alpha * (code_exp - code_neu)[0][2]
-    base_layer5 = code_base[0][4] + args.alpha * (code_exp - code_neu)[0][4]
-    code_new = code_base
-    code_new[0][2] = base_layer3
-    code_new[0][4] = base_layer5
+    # base_layer3 = code_base[0][2] + args.alpha * (code_exp - code_neu)[0][2]
+    # base_layer5 = code_base[0][4] + args.alpha * (code_exp - code_neu)[0][4]
+    # code_new = code_base
+    # code_new[0][2] = base_layer3
+    # code_new[0][4] = base_layer5
 
 
     filename = f'w_plus_{args.alpha}.npy'

@@ -9,7 +9,7 @@ import glob
 mode = 2
 
 if mode == 1:
-    video_path = '../data/vid_qx.mp4'
+    video_path = '../data/Person2.mp4'
     save_folder = video_path.replace('.mp4', '_frames')
     if not os.path.exists(save_folder):
         os.mkdir(save_folder)
@@ -36,7 +36,7 @@ elif mode == 2:
     frameSize = (1024,1024)
     # frames_folder = 'E:/NTU_FYP/pixel2style2pixel/data/video/vid6_frames_aligned_reconstructed/transfer_result_base_4/alpha0.6/transferred_frames'
     # frames_folder = 'E:/NTU_FYP/pixel2style2pixel/data/video/vid6_frames_aligned_reconstructed/inference_results'
-    frames_folder = '../data/vid_qx_results/inference_results'
+    frames_folder = '../data/Person2_frames_aligned'
 
     out_name = frames_folder + '_compiled.avi'
     out = cv2.VideoWriter(out_name, cv2.VideoWriter_fourcc(*'DIVX'), 30, frameSize)
