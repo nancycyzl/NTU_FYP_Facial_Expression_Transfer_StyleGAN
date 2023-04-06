@@ -1,8 +1,7 @@
 NTU Final Year Project (FYP): Facial Expression Transfer using StyleGAN
 -----------------------------------------------------------------------
-<br>
 
-<p align="left"><img src="https://github.com/nancycyzl/NTU_FYP_Facial_Expression_Transfer_StyleGAN/blob/master/demo_image.PNG" width="70%"></p>
+<p align="left"><img src="https://github.com/nancycyzl/NTU_FYP_Facial_Expression_Transfer_StyleGAN/blob/master/demo_image.PNG" width="90%"></p>
 
 This project supports image and video-based facial expression transfer. <br>
 Accompanying video [here](https://youtu.be/cIhcJgyeGB8)
